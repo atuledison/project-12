@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseCode-Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:ital,wght@1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        li{
+            height: 25px;
+            width: 25px;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        li a:hover svg{
+            transform: scale(1.3);
+            transition: all 0.2s;
+
+        }
+        .nav{
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background-color: #ffffff55;
+            border-radius: 20px;
+            margin-right: 120px;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            /* background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); */
+            background-image: url("https://images.pexels.com/photos/3724836/pexels-photo-3724836.jpeg?cs=srgb&dl=pexels-lo%C3%AFc-manegarium-3724836.jpg&fm=jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.218);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(5px) saturate(140%);
+            padding-left: 20px;
+
+        }
+        .btn{
+            height: fit-content;
+            width: fit-content;
+            padding-right: 20px;
+            
+            
+        }
+        @media (max-width: 712px) {
+            .nav{
+                margin: 0;
+            }
+        }
+        @keyframes btn {
+            0%{
+                background-color:rgb(250, 37, 87);
+                box-shadow: 0px 0px 5px rgb(250, 37, 87);
+            }
+            20%{
+                background-color: #ee30ff;
+                box-shadow: 0px 0px 5px #ee30ff;
+            }
+            40%{
+                background-color: #921cf1;
+                box-shadow:  0px 0px 5px #921cf1;
+            }
+            60%{
+                background-color: #8834ff;
+                box-shadow:0px 0px 5px #8834ff;
+            }
+            80%{
+                background-color: rgb(64, 185, 250);
+                box-shadow:0px 0px 5px rgb(64, 185, 250) ;
+            }
+            100%{
+               background-color:rgb(250, 37, 186);
+               box-decoration-break:0px 0px 5px rgb(250, 37, 186);
+            }
+            
+        }
+        .btn button{
+            padding: 5px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: rgb(250, 37, 87);
+            color: white;
+            box-shadow: 0px 0px 5px rgb(250, 37, 87);
+            animation: btn 3s ease-in 0s infinite forwards;
+            cursor: pointer;
+        }
+        .btn button:hover{
+            transform: scale(1.1);
+            transition-duration: 0.2s;
+        }
+        /* @media  (max-width: 672px)  {
+            .nav{
+                position: unset;
+            }
+        } */
+        
+        .logo h1{
+            color: gold;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Rubik Mono One', monospace;
+            animation: heading 3s ease-in 0s infinite forwards;
+            
+            
+        }
+        /* @keyframes heading {
+            0%{
+                color:rgb(250, 37, 87);
+                
+            }
+            20%{
+                color: #ee30ff;
+                
+            }
+            40%{
+                color: #921cf1;
+                
+            }
+            60%{
+                color: #8834ff;
+                
+            }
+            80%{
+                color: rgb(64, 185, 250);
+                
+            }
+            100%{
+               color:rgb(250, 37, 186);
+               
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo"><h1>MouseCode</h1></div>
+            <div class="nav">
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="home"><path fill="#200E32" d="M6.64373233,18.7821107 L6.64373233,15.7152449 C6.64371685,14.9380902 7.27567036,14.3067075 8.05843544,14.3018198 L10.9326107,14.3018198 C11.7188748,14.3018198 12.3562677,14.9346318 12.3562677,15.7152449 L12.3562677,15.7152449 L12.3562677,18.7732212 C12.3562498,19.4472781 12.9040221,19.995083 13.5829406,20 L15.5438266,20 C16.4596364,20.0023291 17.3387522,19.6427941 17.9871692,19.0007051 C18.6355861,18.3586161 19,17.4867541 19,16.5775231 L19,7.86584638 C19,7.13138763 18.6720694,6.43471253 18.1046183,5.96350064 L11.4429783,0.674268354 C10.2785132,-0.250877524 8.61537279,-0.22099178 7.48539114,0.745384082 C7.48539114,0.745384082 0.967012253,5.96350064 0.967012253,5.96350064 C0.37274068,6.42082162 0.0175522924,7.11956262 0,7.86584638 L0,16.5686336 C0,18.463707 1.54738155,20 3.45617342,20 L5.37229029,20 C5.69917279,20.0023364 6.01348703,19.8750734 6.24547302,19.6464237 C6.477459,19.417774 6.60792577,19.1066525 6.60791706,18.7821107 L6.64373233,18.7821107 Z" transform="translate(2.5 2)"></path></svg></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 6.35 6.35" id="about"><path d="M 3.175 0 A 3.175 3.175 0 0 0 0 3.175 A 3.175 3.175 0 0 0 3.175 6.35 A 3.175 3.175 0 0 0 6.35 3.175 A 3.175 3.175 0 0 0 3.175 0 z M 3.175 1.3229167 A 0.26458332 0.26458332 0 0 1 3.4395833 1.5875 A 0.26458332 0.26458332 0 0 1 3.175 1.8520833 A 0.26458332 0.26458332 0 0 1 2.9104167 1.5875 A 0.26458332 0.26458332 0 0 1 3.175 1.3229167 z M 3.1760335 2.3807332 A 0.2645835 0.2645835 0 0 1 3.4395833 2.6463501 L 3.4395833 4.7619832 A 0.2645835 0.2645835 0 0 1 3.1760335 5.0276001 A 0.2645835 0.2645835 0 0 1 2.9104167 4.7619832 L 2.9104167 2.6463501 A 0.2645835 0.2645835 0 0 1 3.1760335 2.3807332 z " paint-order="markers fill stroke"></path></svg></a></li>
+                <li><a href="#"><?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g>
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M19.938 8H21a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1.062A8.001 8.001 0 0 1 12 23v-2a6 6 0 0 0 6-6V9A6 6 0 1 0 6 9v7H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1.062a8.001 8.001 0 0 1 15.876 0zM3 10v4h1v-4H3zm17 0v4h1v-4h-1zM7.76 15.785l1.06-1.696A5.972 5.972 0 0 0 12 15a5.972 5.972 0 0 0 3.18-.911l1.06 1.696A7.963 7.963 0 0 1 12 17a7.963 7.963 0 0 1-4.24-1.215z"/>
+                    </g>
+                </svg></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m352-522 86-87-56-57-16 16q-11 11-27.5 11.5T310-650q-12-12-12-28.5t12-28.5l15-15-45-45-87 87 159 158Zm328 329 87-87-45-45-16 15q-12 12-28 12t-28-12q-12-12-12-28t12-28l15-16-57-56-86 86 158 159Zm24-567 57 57-57-57ZM160-120q-17 0-28.5-11.5T120-160v-113q0-8 3-15.5t9-13.5l163-163-173-173q-17-17-17-42t17-42l116-116q17-17 42-16.5t42 17.5l174 173 151-152q12-12 27-18t31-6q16 0 31 6t27 18l53 54q12 12 18 27t6 31q0 16-6 30.5T816-647L665-495l173 173q17 17 17 42t-17 42L722-122q-17 17-42 17t-42-17L465-295 302-132q-6 6-13.5 9t-15.5 3H160Zm40-80h56l392-391-57-57-391 392v56Zm420-419-29-29 57 57-28-28Z"/></svg></a></li>
+                <li><a href="#"><?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 387.9 387.9" style="enable-background:new 0 0 387.9 387.9;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#258ACE;}
+                        .st1{fill:#FDB735;}
+                        .st2{fill:#36C136;}
+                        .st3{fill:#FD2475;}
+                        .st4{fill:#895EAD;}
+                        .st5{fill:#D83632;}
+                        .st6{fill:#30D4A2;}
+                        .st7{fill:#46CCCC;}
+                        .st8{fill:#4CC3CB;}
+                        .st9{fill:#60B0E2;}
+                        .st10{fill:none;stroke:#000000;stroke-width:14;stroke-miterlimit:10;}
+                        .st11{fill:#FFFFFF;}
+                    </style>
+                    <circle cx="194" cy="194" r="168.8"/>
+                    <path class="st11" d="M227.3,258.4c-7.1-0.2-14.6-1.7-21.5-5.1c-30.3-15.2-54.5-36.7-69.6-67.6c-2.5-5.1-4.5-10.4-5.8-15.9
+                        c-3.4-14.7,2-28.8,14.2-37.2c6.8-4.7,11.9-3.9,16.5,2.9c5,7.3,10.3,14.3,14.3,22.2c3.1,6.1,4.1,11.6-1.4,17.7
+                        c-6.9,7.6-6.5,16.1,0,23.9c4,4.9,8.2,9.7,12.6,14.1c7.3,7.4,14.8,8.4,24.1,3.9c1.2-0.6,2.5-1.1,3.5-1.9c7.9-6.6,15.4-5.4,23,0.5
+                        c5.5,4.3,11.7,7.6,16.7,12.6c5.8,5.7,6,9.5,1.4,16.3C248.8,254.6,239.2,258.2,227.3,258.4z"/>
+                    </svg>
+                    </a></li>
+            </div>
+            <div class="btn" ><button type="submit" style="font-family: cursive;">Buy Premium</button></div>
+        </div>
+    </div>
+</body>
+</html>
